@@ -1,0 +1,201 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raretech Exam</title>
+  <link rel="shortcut icon" href="img/RARE.jpg" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="font-awesome.css"> -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* body {
+      cursor: url('img/rare.png'), auto;
+      
+    } */
+    
+    #loginForm {
+      
+      /* cursor: url('img/rare.png'), auto; */
+      position: relative;
+      left: 30%;
+      height: 100vh;
+      width: 90%;
+      max-width: 500px;
+      border: 3px solid green;
+      background-color: white;
+      padding: 10vh 5%;
+      text-align: center;
+    }
+
+    #loginForm h2 {
+      font-size: 2em;
+    }
+
+    .input {
+      padding: 2vh;
+      margin-top: 5vh;
+      width: 100%;
+      /* Expand the input to full width */
+      max-width: 400px;
+      /* Limit the maximum width for larger screens */
+    }
+
+    #userLogin button {
+      cursor: pointer;
+      color: white;
+      background-color: #007bff;
+      width: 100%;
+      /* Expand the button to full width */
+      max-width: 400px;
+      /* Limit the maximum width for larger screens */
+      padding: 1vh;
+      margin-top: 5vh;
+      font-size: 1em;
+      font-weight: bolder;
+      border-radius: 10px;
+    }
+
+    #userLogin button:hover {
+      color: #007bff;
+      background-color: white;
+    }
+
+    marquee {
+      font-size: 2em;
+      /* Adjust font size as needed */
+      background-color: white;
+      font-weight: bold;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      #loginForm {
+        margin-left: 5%;
+        padding: 10vh 5%;
+
+      }
+
+      .input {
+        max-width: 100%;
+      }
+
+      #userLogin button {
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      #loginForm {
+        margin-left: 5%;
+        padding: 10vh 5%;
+      }
+
+      .input {
+        max-width: 100%;
+      }
+
+      #userLogin button {
+        max-width: 100%;
+      }
+
+      #loginForm h2 {
+        font-size: 1.5em;
+        /* Adjust font size for smaller screens */
+      }
+
+    }
+  </style>
+  <!-- FontAweome CDN Link for Icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="js/cdnjs.cloudflare.com_ajax_libs_gsap_3.12.2_gsap.min.js"></script>
+
+</head>
+
+<body>
+  <!-- start Quiz button -->
+  <marquee direction="Left">Raretech Institute Of Information Technology</marquee>
+  <div class="start_btn"><button>Start Exam</button></div>
+  <!-- Login Form -->
+  <div id="loginForm" style="display: none;">
+    <h2>Exam Login</h2>
+    <hr>
+    <form id="userLogin">
+      <input type="text" id="username" class="input" placeholder="Username"><br>
+      <input type="password" id="password" class="input" placeholder="Password"><br>
+      <button type="button" onclick="login()">Exam Login</button>
+    </form>
+  </div>
+
+  <!-- Info Box -->
+  <div class="info_box">
+    <div class="info-title"><span>Some Rules of this Quiz</span></div>
+    <div class="info-list">
+      <div class="info">1. You will have only <span>1 Hour</span> for your exam.</div>
+      <div class="info">2. Once you select your answer, it can't be undone.</div>
+      <div class="info">3. You can't select any option once time goes off.</div>
+      <div class="info">4. You can't exit from the Exam while doing it.</div>
+      <div class="info">5. You'll get points on the basis of your correct answers.</div>
+    </div>
+    <div class="buttons">
+      <button class="quit">Exit Quiz</button>
+      <button class="restart">Continue</button>
+    </div>
+  </div>
+
+  <!-- Quiz Box -->
+  <div class="timer" style="display: none;">
+    <div class="time_left_txt">Time Left</div>
+    <div class="timer_sec">01:00</div>
+  </div>
+  <div class="quiz_box">
+    <header>
+      <div class="title">Raretech Exam</div>
+      <div class="time_line"></div>
+    </header>
+    <section>
+      <div class="que_text">
+        <!-- Here I've inserted question from JavaScript -->
+      </div>
+      <div class="option_list">
+        <!-- Here I've inserted options from JavaScript -->
+      </div>
+    </section>
+
+    <!-- footer of Quiz Box -->
+    <footer>
+      <div class="total_que">
+        <!-- Here I've inserted Question Count Number from JavaScript -->
+      </div>
+      <button class="next_btn">Next Que</button>
+    </footer>
+  </div>
+
+  <!-- Result Box -->
+  <div class="result_box">
+    <div class="icon">
+      <i class="fas fa-crown"></i>
+    </div>
+    <div class="complete_text">You've completed the Exam!</div>
+    <div class="score_text">
+      <!-- Here I've inserted Score Result from JavaScript -->
+    </div>
+    <div class="buttons">
+      <button class="restart" style="display: none;">Replay Quiz</button>
+      <button class="quit">Quit Quiz</button>
+    </div>
+  </div>
+  <div id="circle"></div>
+  <!-- <img src="img/rare.png" alt="logo" id="circle" disabled> -->
+
+  <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+  <script src="js/questions.js"></script>
+
+  <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+  <script src="js/script.js"></script>
+  <script src="js/script2.js"></script>
+</body>
+
+</html>
